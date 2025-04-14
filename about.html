@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s ease;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #2575fc;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #2575fc;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* Full Image Styles */
+    .github-profile-img {
+      width: 100%; /* Take full width of the container */
+      height: auto; /* Maintain the aspect ratio */
+      max-width: 500px; /* Optional: Set a max-width to prevent the image from becoming too large */
+      margin-top: 2rem;
+      opacity: 0; /* Start hidden for GSAP animation */
+      cursor: pointer; /* Makes it clickable */
+    }
+
+    .projects-message {
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      color: #2575fc;
+      font-weight: bold;
+      opacity: 0; /* Start hidden for GSAP animation */
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      footer {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><a href="index.html" style="color: white; font-size: 1.5rem;">Arsel Curri</a></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>About Me</h1>
+    <p>Hey! I’m Arsel Curri, a 21-year-old tech enthusiast and student at Beder University in Tirana, Albania. From a young age, I’ve always been fascinated by how technology shapes the world around us. That curiosity turned into a real passion, and now I’m fully focused on building a future in the tech world. <br><br>
+      I enjoy exploring everything from software development to emerging technologies like AI, cybersecurity, and cloud computing. I’m constantly learning, experimenting with new tools, and taking on projects that challenge me to think differently and solve real-world problems. For me, technology isn’t just about machines or code—it’s about innovation, creativity, and making life better through smart solutions. <br><br>
+      Outside of class, I like diving into side projects, keeping up with tech trends, and connecting with like-minded people. My goal is to not only become a skilled professional but also someone who can contribute meaningfully to the tech community—whether that’s through building great products, mentoring others, or just sharing what I learn along the way.
+    </p>
+
+    <!-- Clickable GitHub Profile Image -->
+    <a href="https://github.com/arseli2025" target="_blank">
+      <img src="giti.png" alt="GitHub Profile" class="github-profile-img">
+    </a>
+
+    <!-- Message about Projects -->
+    <div class="projects-message">
+      <p>Some of my projects are available on my <a href="https://github.com/arseli2025" target="_blank" style="color: #2575fc;">GitHub</a>. Click to see more!</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Arsel Curri. All rights reserved.
+  </footer>
+
+  <script>
+    // GSAP Animation for the GitHub profile image with spin
+    gsap.to(".github-profile-img", {
+      duration: 2.5,         
+      opacity: 1,          
+      rotation: 720,     
+      ease: "power3.out",  
+      delay: 0.5,         
+    });
+
+    // GSAP Animation for the projects message
+    gsap.to(".projects-message", {
+      duration: 1.5,
+      opacity: 1,
+      y: 20,
+      ease: "power3.out",
+      delay: 1,
+    });
+
+    // GSAP Animation for the text elements (optional, for added complexity)
+    gsap.from("h1", {
+      duration: 1,
+      opacity: 0,
+      y: -50,
+      ease: "power3.out",
+    });
+
+    gsap.from("p", {
+      duration: 1,
+      opacity: 0,
+      y: 30,
+      ease: "power3.out",
+      delay: 0.3,
+    });
+  </script>
+</body>
+</html>

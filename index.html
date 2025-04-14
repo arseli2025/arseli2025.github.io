@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arsel Curri - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background: #f7f9fc;
+      color: #333;
+      line-height: 1.6;
+    }
+    nav {
+      background: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #2575fc;
+    }
+    .container {
+      padding: 2rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      border-radius: 1rem;
+      animation: fadeIn 1.5s ease-out;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: slideUp 1s ease-out;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      animation: slideUp 1s ease-out;
+      animation-delay: 0.3s;
+    }
+    .profile-photo {
+      display: block;
+      margin: 2rem auto 0 auto;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      animation: bounce 2s ease-out infinite;
+    }
+    .info {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.1rem;
+      animation: fadeIn 1.5s ease-out;
+    }
+    .skills {
+      margin-top: 2rem;
+      text-align: center;
+      animation: fadeIn 1.5s ease-out;
+    }
+    .skills h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      animation: slideUp 1s ease-out;
+    }
+    .skills ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .skills li {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #e0e7ff;
+      color: #1e3a8a;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    .skills li:hover {
+      transform: scale(1.1);
+      background-color: #2575fc;
+      color: white;
+    }
+    .socials {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .socials h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 0 1rem;
+      font-size: 1.2rem;
+      color: #2575fc;
+      text-decoration: none;
+      border: 2px solid #2575fc;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    .social-links a img {
+      vertical-align: middle;
+      margin-right: 8px;
+      width: 24px;
+    }
+    .social-links a:hover {
+      background-color: #2575fc;
+      color: white;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #fff;
+      margin-top: 2rem;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+      }
+      .skills ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero {
+        padding: 3rem 1rem;
+      }
+      .profile-photo {
+        width: 120px;
+        height: 120px;
+      }
+      .skills ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .social-links a {
+        font-size: 1rem;
+      }
+    }
+
+    /* Keyframes for Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><a href="index.html" style="color: white; font-size: 1.5rem;">Arsel Curri</a></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="hero">
+      <img class="profile-photo" src="arsel.jpg" alt="Arsel Curri Photo" width="200" height="300">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Showcasing my projects, skills, and passion for building great things.</p>
+    </div>
+
+    <div class="info">
+      <p><strong>Name:</strong> Arsel Curri</p>
+      <p><strong>Age:</strong> 21</p>
+      <p><strong>Education:</strong> Bachelor's degree: Beder University, Tirana, Albania - Ongoing (2022-2025)</p>
+    </div>
+
+    <div class="skills">
+      <h2>My Skills</h2>
+      <ul>
+        <li>Python</li>
+        <li>Web Development</li>
+        <li>Web Scraping</li>
+        <li>Data Mining</li>
+      </ul>
+    </div>
+
+    <div class="socials">
+      <h2>Connect with Me</h2>
+      <div class="social-links">
+        <a href="https://github.com/arseli2025" target="_blank">
+          <img src="github.png" alt="GitHub">GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/arsel-curri-89201526a/?originalSubdomain=al" target="_blank">
+          <img src="link.png" alt="LinkedIn">LinkedIn
+        </a>
+        <a href="mailto:arselcurri@gmail.com">
+          <img src="email.jpg" alt="Email">Email
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Arsel Curri. All rights reserved.
+  </footer>
+</body>
+</html>
